@@ -1,16 +1,12 @@
-import type {ReactNode} from "react";
 import Nav from "./Nav.tsx";
+import {Outlet} from "react-router";
 
-type Props = {
-  readonly children: ReactNode
-}
-
-export default function Base({children}:Props) {
+export default function Base() {
   return (
     <>
       <Nav/>
-      <main className='p-3 mt-3'>
-        {children}
+      <main className='px-2 sm:px-3 md:px-6 mt-3'>
+        <Outlet/>
       </main>
     </>
   )
